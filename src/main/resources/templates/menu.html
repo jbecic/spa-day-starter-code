@@ -22,14 +22,14 @@
             <li th:text="${facial}"></li>
         </ul>
     </div>
-    <div>
-        <h3 th:if='${manipedi.equals("manicure")}'>Manicure</h3>
-        <p th:if='${manipedi.equals("manicure")}' th:replace="fragments :: manicureDescription"></p>
-
-        <h3 th:unless='${!manipedi.equals("pedicure")}'>Pedicure</h3>
-        <p th:unless='${!manipedi.equals("pedicure")}' th:replace="fragments :: pedicureDescription"></p>
-
-    </div>
+        <div th:if='${manipedi.equals("manicure")}'>
+            <h3>Manicure</h3>
+            <p th:replace="fragments :: manicureDescription"></p>
+        </div>
+        <div th:unless='${manipedi.equals("manicure")}'>
+            <h3>Pedicure</h3>
+            <p th:replace="fragments :: pedicureDescription"></p>
+        </div>
 </div>
 </body>
 </html>
