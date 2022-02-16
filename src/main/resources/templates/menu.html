@@ -17,11 +17,16 @@
     <h2>Menu of Available Services</h2>
     <h3>Facial Treatments</h3>
     <p>The facial treatments below are recomended by our esteticians for your given skin type.</p>
-    <div th:each="facial : ${appropriateFacials}">
-        <ul>
-            <li th:text="${facial}"></li>
-        </ul>
-    </div>
+    <table>
+        <thead>
+        <tr>
+            <th>Facial Treatments</th>
+        </tr>
+        </thead>
+        <tr th:each="facial : ${appropriateFacials}">
+            <td th:text="${facial}"></td>
+        </tr>
+    </table>
         <div th:if='${manipedi.equals("manicure")}'>
             <h3>Manicure</h3>
             <p th:replace="fragments :: manicureDescription"></p>
