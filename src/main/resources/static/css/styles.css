@@ -24,3 +24,8 @@ table {
             padding: 10px;
             text-align: center;
 }
+
+ul {
+    list-style: none;
+    text-decoration: none;
+}
